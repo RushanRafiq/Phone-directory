@@ -3,18 +3,17 @@ print("18B-087-Cs(A)")
 print("Question_2")
 phone_directory={}
 def phone():
-
     x=input("Enter the name: ")
     y=input("Enter the phone number: ")
     phone_directory[x]=y
     p=input("Do you want to add more Contact(Yes/No): ")
-    if p== ("Yes").lower():
-        while p==("Yes").lower():
+    if p== "Yes" or p== "YES" or p== "yes":
+        while p=="Yes" or p=="YES" or p=="yes":
             x=input("Enter the name: ")
             y=input("Enter the phone number: ")
             phone_directory[x]=y
             z=input("Do you want to add more Contact(Yes/No): ")
-            if z==("No").lower():
+            if z=="No" or z=="NO" or z=="no":
                 break
         for i,k in phone_directory.items():
             print('{}:{}'.format(i,k))
@@ -23,7 +22,7 @@ def phone():
 
 def delete():
     g=input("Do you want to delete some contacts(Yes/No): ")
-    if g==("Yes").lower():
+    if g=="Yes" or g=="YES" or g=="yes":
         r=input("Enter the name: ")
         if r in phone_directory:
             del phone_directory[str(r)]
