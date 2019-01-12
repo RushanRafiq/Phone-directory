@@ -1,0 +1,37 @@
+print("Rushan Rafiq")
+print("18B-087-Cs(A)")
+print("Question_2")
+phone_directory={}
+def phone():
+
+    x=input("Enter the name: ")
+    y=input("Enter the phone number: ")
+    phone_directory[x]=y
+    p=input("Do you want to add more Contact(Yes/No): ")
+    if p== ("Yes").lower():
+        while p==("Yes").lower():
+            x=input("Enter the name: ")
+            y=input("Enter the phone number: ")
+            phone_directory[x]=y
+            z=input("Do you want to add more Contact(Yes/No): ")
+            if z==("No").lower():
+                break
+        for i,k in phone_directory.items():
+            print('{}:{}'.format(i,k))
+    else:
+        print("Thank you")
+
+def delete():
+    g=input("Do you want to delete some contacts(Yes/No): ")
+    if g==("Yes").lower():
+        r=input("Enter the name: ")
+        if r in phone_directory:
+            del phone_directory[str(r)]
+            for i,j in phone_directory.items():
+                print('{}:{}'.format(i, j))
+        else:
+            print("Sorry no contact exit")
+    else:
+        print("Thank you")
+phone()
+delete()
